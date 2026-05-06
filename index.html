@@ -6,29 +6,78 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/grid.css" />
     <link rel="stylesheet" href="./css/queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./skills.html">Skills</a></li>
-          <li><a href="./projects.html">Projects</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li><a href="./cv.html">CV</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <main>
-      <h1>Adam Dulcamara</h1>
-    </main>
+      <section class="hero-model-section">
+        <header>
+          <nav class="nav">
+            <a href="./index.html" class="nav-logo">AD</a>
 
-    <footer>
-      <p>Adam Dulcamara - Portfolio &copy; <span id="year"></span></p>
-    </footer>
+            <button
+              class="nav-toggle"
+              id="nav-toggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="nav-menu"
+              type="button"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-menu">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./skills.html">Skills</a></li>
+              <li><a href="./projects.html">Projects</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="./cv.html">CV</a></li>
+            </ul>
+          </nav>
+        </header>
+        <img
+          src="./images/homepage/tre-chime.webp"
+          alt="Tre Chime Italian mountains"
+          class="tre-chime"
+        />
+
+        <h1 class="name-container">
+          <span class="first-name">Adam</span>
+          <span class="surname">Dulcamara</span>
+        </h1>
+
+        <model-viewer
+          src="/Portfolio/images/homepage/model-me.glb"
+          alt="3D model of Adam"
+          auto-rotate
+          camera-controls
+          disable-zoom
+          min-camera-orbit="auto 80deg auto"
+          max-camera-orbit="auto 92deg auto"
+          shadow-intensity="1"
+          exposure="1.1"
+          interaction-prompt="none"
+          class="home-page-model"
+        >
+        </model-viewer>
+        <footer>
+          <p>Adam Dulcamara - Portfolio &copy; <span id="year"></span></p>
+        </footer>
+      </section>
+    </main>
 
     <script src="./js/script.js"></script>
   </body>

@@ -26,7 +26,7 @@
 }
 
 .grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 70%, 1fr);
 }
 
 .grid--3-cols {
@@ -39,4 +39,8 @@
 
 .grid--5-cols {
   grid-template-columns: repeat(5, 1fr);
+}
+
+.spacer-top-l {
+  padding-top: 2.4rem;
 }
