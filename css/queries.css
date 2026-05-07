@@ -6,6 +6,27 @@
   .grid--3-cols {
     grid-template-columns: 1fr;
   }
+
+  .project-card {
+    overflow: hidden;
+    padding: 2rem;
+    border-radius: 1.2rem;
+  }
+
+  .project-title {
+    min-height: 5rem;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .contact-details p {
+    gap: 6rem;
+    font-size: 1.8rem;
+  }
+
+  .contact-label {
+    width: 8rem;
+  }
 }
 
 /*=====================================*/
@@ -15,6 +36,7 @@
 @media (max-width: 820px) {
   main {
     font-size: 2rem;
+    line-height: 1.6;
   }
 
   header {
@@ -102,6 +124,33 @@
     font-size: 9rem;
     left: -1rem;
   }
+
+  .contact-details p {
+    gap: 1.5rem;
+  }
+
+  .contact-label {
+    width: 10rem;
+  }
+
+  .contact-details a {
+    overflow-wrap: anywhere;
+  }
+
+  .beautiful-blue {
+    font-family: "Allura", cursive;
+    font-size: 2.5rem;
+    color: var(--beautiful-blue);
+  }
+
+  .contact-details p {
+    gap: 4rem;
+    font-size: 1.5rem;
+  }
+
+  .contact-label {
+    width: 8rem;
+  }
 }
 
 /*======================*/
@@ -110,14 +159,16 @@
 @media (max-width: 600px) {
   main {
     font-size: 1.5rem;
+    line-height: 1.5;
   }
   .h1-not-homepage {
-    font-size: 5.2rem;
+    font-size: 4.2rem;
     padding: 4.4rem 0 0 0;
-    /* padding-left: 1.2rem;
-    padding-right: 1.2rem; */
-    /* padding: 0;  */
     text-align: center;
+  }
+
+  .container {
+    padding: 2rem 2.8rem;
   }
 
   .name-container {
@@ -133,5 +184,24 @@
     font-size: 4.8rem;
     left: -1rem;
     top: -0.5rem;
+  }
+  .project-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .project-description {
+    font-size: 1.2rem;
+  }
+
+  .beautiful-blue {
+    font-family: "Allura", cursive;
+    font-size: 2.5rem;
+    color: var(--beautiful-blue);
+  }
+
+  .contact-details p {
+    gap: 2rem;
+    font-size: 1.2rem;
   }
 }
