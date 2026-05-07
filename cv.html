@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&display=swap"
       rel="stylesheet"
     />
     <title>CV</title>
@@ -19,13 +19,20 @@
       <nav class="nav">
         <a href="./index.html" class="nav-logo">AD</a>
 
-        <button class="nav-toggle" aria-label="Open navigation">
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          type="button"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-menu">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./skills.html">Skills</a></li>
@@ -36,7 +43,22 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <h1 class="h1-not-homepage">My CV</h1>
+
+      <section class="container">
+        <p>
+          To download a copy of my CV,
+          <a
+            href="./assets/cv/adam-dulcamara-cv.pdf"
+            download="Adam-Dulcamara-CV.pdf"
+            class="cv-click-here"
+          >
+            click here
+          </a>
+        </p>
+      </section>
+    </main>
 
     <footer>
       <p>Adam Dulcamara - Portfolio &copy; <span id="year"></span></p>

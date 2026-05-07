@@ -9,23 +9,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant:ital,wght@0,300..700;1,300..700&family=DM+Serif+Display:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <title>Projects</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <title>My Projects</title>
   </head>
   <body>
     <header>
       <nav class="nav">
         <a href="./index.html" class="nav-logo">AD</a>
 
-        <button class="nav-toggle" aria-label="Open navigation">
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          type="button"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-menu">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./skills.html">Skills</a></li>
@@ -37,27 +48,40 @@
     </header>
 
     <main>
-      <h1>My Projects</h1>
+      <h1 class="h1-not-homepage">My Projects</h1>
 
-      <section class="grid grid--3-cols">
-        <article>
-          <img
-            src="./images/achievements/fastrack-completion/fastrack-certificate 1.webp"
-            alt=""
-          />
-        </article>
-        <article>
-          <img
-            src="./images/achievements/fastrack-completion/fastrack-certificate 1.webp"
-            alt=""
-          />
-        </article>
-        <article>
-          <img
-            src="./images/achievements/fastrack-completion/fastrack-certificate 1.webp"
-            alt=""
-          />
-        </article>
+      <section class="container spacer-top-l">
+        <div class="grid grid--2-cols">
+          <article class="project-card">
+            <h2 class="project-title">Still Life</h2>
+
+            <img
+              src="./assets/images/projects/project-one.webp"
+              alt="Screenshot of Project One"
+              class="project-img"
+            />
+
+            <p class="project-description">
+              Brief description of your first work project. Explain what it
+              does, what technologies you used, and what problem it solves.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h2 class="project-title">Aurum Landscapes</h2>
+
+            <img
+              src="./assets/images/projects/project-two.webp"
+              alt="Screenshot of Project Two"
+              class="project-img"
+            />
+
+            <p class="project-description">
+              Brief description of your second work project. Explain the main
+              features, your role, and what you learned while building it.
+            </p>
+          </article>
+        </div>
       </section>
     </main>
 
