@@ -7,7 +7,8 @@
     grid-template-columns: 1fr;
   }
 
-  .project-card {
+  .project-card,
+  .skill-card {
     overflow: hidden;
     padding: 2rem;
     border-radius: 1.2rem;
@@ -151,6 +152,28 @@
   .contact-label {
     width: 8rem;
   }
+
+  .skills-intro {
+    font-size: 1.7rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-card {
+    min-height: 22rem;
+  }
+
+  .cv-page {
+    min-height: 190vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cv-page main {
+    flex: 1;
+  }
 }
 
 /*======================*/
@@ -202,6 +225,28 @@
 
   .contact-details p {
     gap: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .skills-intro {
+    text-align: center;
+    font-size: 1.35rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    min-height: auto;
+    padding: 2rem;
+  }
+
+  .skill-card h2 {
+    font-size: 2rem;
+  }
+
+  .skill-card p {
     font-size: 1.2rem;
   }
 }

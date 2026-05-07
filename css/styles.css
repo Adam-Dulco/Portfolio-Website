@@ -149,13 +149,6 @@ header {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-.name-container {
-  width: fit-content;
-  margin: 4rem auto 0 auto;
-  text-align: center;
-  line-height: 1;
-}
-
 .first-name {
   display: block;
   font-family: "DM Serif Display", serif;
@@ -199,7 +192,7 @@ footer {
   background-color: rgb(1, 106, 122);
   font-size: 1.5rem;
   font-family: "Allura", cursive;
-  padding: 30px 15px;
+  padding: 10px 15px 0 15px;
   color: var(--text-light);
   text-shadow:
     0 0 8px rgba(1, 182, 210, 0.7),
@@ -248,11 +241,9 @@ footer {
   position: absolute;
   top: 3rem;
   left: 50%;
-
+  margin: 4rem auto 0 auto;
   transform: translateX(-50%);
-
   z-index: 4;
-
   width: fit-content;
   text-align: center;
   line-height: 1;
@@ -263,7 +254,7 @@ footer {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 85%;
+  height: 78%;
   z-index: 3;
   background: transparent;
   transform: translateY(230px);
@@ -286,7 +277,7 @@ footer {
   width: 100%;
   font-size: 1.5rem;
   font-family: "Allura", cursive;
-  padding: 3px 15px;
+  padding: 10px 15px 0 15px;
   z-index: 5;
   color: var(--text-light);
   background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
@@ -300,7 +291,18 @@ footer {
 /*    CV PAGE     */
 /*================*/
 
+.push-footer-down {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.push-footer-down main {
+  flex: 1;
+}
+
 .cv-click-here {
+  display: inline-block;
   font-family: "Allura", cursive;
   font-size: 3.6rem;
   font-weight: 400;
@@ -387,15 +389,13 @@ footer {
     0 0 14px rgba(1, 182, 210, 0.14);
 }
 
-.project-description {
+.project-description,
+.skill-card p {
   max-width: 90%;
-
-  margin: 0 auto;
-
+  margin: 2rem auto;
   font-size: 1.35rem;
   line-height: 1.6;
   text-align: center;
-
   color: var(--text-dark);
 }
 
@@ -451,10 +451,217 @@ footer {
 /*    ABOUT PAGE    */
 /*==================*/
 
-.my-journey {
+/* .my-journey {
   padding-top: 4.2rem;
+} */
+
+.my-journey {
+  margin-top: 4.2rem;
+  padding: 4rem;
+  border-radius: 1.2rem;
+
+  background: linear-gradient(
+    145deg,
+    rgba(1, 182, 210, 0.2),
+    rgba(1, 106, 122, 0.32)
+  );
+
+  border: 1px solid rgba(1, 182, 210, 0.3);
+
+  box-shadow:
+    0 0 25px rgba(1, 182, 210, 0.16),
+    var(--shadow);
+
+  backdrop-filter: blur(10px);
 }
 
-.my-journey-paragraph-2 {
-  padding-top: 4.2rem;
+.my-journey img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.8rem;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.14),
+    0 0 14px rgba(1, 182, 210, 0.14);
+}
+
+.my-journey h2 {
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  color: var(--text-light);
+  text-shadow:
+    0 0 8px rgba(1, 182, 210, 0.8),
+    0 0 18px rgba(1, 182, 210, 0.45);
+  margin-bottom: 3rem;
+}
+
+/*==================*/
+/*    SKILLS PAGE   */
+/*==================*/
+.skill-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  margin-bottom: 2.4rem;
+  border-radius: 1.2rem;
+  min-height: 24rem;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.82),
+      rgba(221, 236, 239, 0.72)
+    ),
+    linear-gradient(135deg, rgba(1, 182, 210, 0.22), rgba(1, 106, 122, 0.26));
+  border: 1px solid rgba(1, 182, 210, 0.28);
+  box-shadow:
+    0 1.4rem 3rem rgba(1, 106, 122, 0.12),
+    0 0 1.8rem rgba(1, 182, 210, 0.12);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.skill-card:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 0 35px rgba(1, 182, 210, 0.28),
+    0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card h2 {
+  /* EXACT SAME STRUCTURE AS PROJECT TITLES */
+  min-height: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1.8rem;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.6rem, 3vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+
+  text-align: center;
+
+  color: var(--text-light);
+
+  text-shadow:
+    0 0 8px rgba(1, 182, 210, 0.8),
+    0 0 18px rgba(1, 182, 210, 0.45);
+}
+
+/* SKILL BADGES */
+
+.skills-intro {
+  padding-bottom: 2.4rem;
+  text-align: center;
+}
+
+.skill-badges {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.skill-badges img {
+  width: 22%;
+  min-width: 5.5rem;
+
+  border-radius: 0.6rem;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.skill-badges img:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+/*================*/
+/*  IMAGE OPENER  */
+/*================*/
+
+.skill-badges img {
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.skill-badges img:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.image-opener {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.88);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 9999;
+}
+
+.image-opener.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-opener-img {
+  max-width: 90%;
+  max-height: 90vh;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(1, 182, 210, 0.2);
+  animation: zoomIn 0.3s ease;
+}
+
+.image-opener-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  background: transparent;
+  border: none;
+  font-size: 4rem;
+  line-height: 1;
+  color: white;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.image-opener-close:hover {
+  transform: scale(1.12);
+  color: var(--beautiful-blue);
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
