@@ -44,3 +44,12 @@
 .spacer-top-l {
   padding-top: 2.4rem;
 }
+
+/*============================*/
+/* JOURNEY PAGE-SPECIFIC GRID */
+/*============================*/
+
+.grid--2-cols-about {
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}

@@ -80,7 +80,14 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.home-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-logo {
@@ -451,10 +458,6 @@ footer {
 /*    ABOUT PAGE    */
 /*==================*/
 
-/* .my-journey {
-  padding-top: 4.2rem;
-} */
-
 .my-journey {
   margin-top: 4.2rem;
   padding: 4rem;
@@ -475,14 +478,20 @@ footer {
   backdrop-filter: blur(10px);
 }
 
-.my-journey img {
-  width: 40%;
+.opening-paragraph-about {
+  text-align: center;
+}
+
+.about-paragraph {
+  font-size: 2rem;
+}
+
+.me-young {
+  width: 100%;
+  max-width: 28rem;
   display: block;
   margin: 0 auto;
   border-radius: 0.8rem;
-  box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.14),
-    0 0 14px rgba(1, 182, 210, 0.14);
 }
 
 .my-journey h2 {
@@ -493,7 +502,26 @@ footer {
   text-shadow:
     0 0 8px rgba(1, 182, 210, 0.8),
     0 0 18px rgba(1, 182, 210, 0.45);
-  margin-bottom: 3rem;
+}
+
+.about-img-thumbs-up {
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.8rem;
+}
+
+.remove-padding-top {
+  padding-top: 0 !important;
+}
+
+.remove-margin-top {
+  margin-top: 0 !important;
+}
+
+.about-spacer-btm {
+  margin-bottom: 2.4rem;
 }
 
 /*==================*/
